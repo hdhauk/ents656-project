@@ -1,0 +1,53 @@
+{
+    "distances_m": {
+        "base_station": 3000,
+        "parking_start": 200,
+        "parking_end": 300,
+        "mall_entry_start": 190
+    },
+    "simulation": {
+        "timestep_sec": 1,
+        "duration_hour": 4
+    },
+    "base_station": {
+        "height_m": 50,
+        "EIRP_dBm": 57,
+        "traffic_channels": 30,
+        "frequency_MHz": 1000
+    },
+    "small_cell": {
+        "height_m": 10,
+        "EIRP_dBm": 30,
+        "traffic_channels": 30,
+        "frequency_MHz": 1000
+    },
+    "user": {
+        "height_m": 1.7,
+        "rx_threshold_dBm": -102,
+        "num_users": 1000,
+        "call_rate_lambda": 1,
+        "avg_call_duration_m": 3,
+        "probabilities": {
+            "in_mall": 0.5,
+            "in_parking_lot": 0.3
+        },
+        "speed_m/s": {
+            "mall": 1,
+            "parking_lot": 1,
+            "road": 15
+        }
+    },
+    "path_loss": {
+        "propagation": "okamura-hata",
+        "shadowing": {
+            "distribution": "log-normal",
+            "mean_dB": 0,
+            "sigma_dB": 2,
+            "segment_length_m": 10
+        },
+        "fading": {
+            "distribution": "rayleigh"
+        },
+        "wall_penetration_dB": 21
+    }
+}
